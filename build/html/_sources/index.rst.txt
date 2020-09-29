@@ -8,15 +8,27 @@ Welcome to ZRPlatform-docs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
    
    hello
-   markdown
+   
+.. toctree::   
+   :caption: Tutorial
+   :glob:
+   
+   tutorial/*
+   
+.. toctree::   
+   :caption: Interface
+   :glob:
+   
+   interface/*
    
 .. toctree::   
    :caption: Test
+   :glob:
    
-   test/test1
+   test/*
 
 Indices and tables
 ==================

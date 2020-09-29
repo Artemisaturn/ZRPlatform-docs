@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>文档维护说明 &mdash; ZRPlatform-docs 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="hello world" href="../hello.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ZRPlatform-docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hello.html">hello world</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">文档维护说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx">Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#githubreadthedocs">在GitHub里集成ReadtheDocs服务</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ZRPlatform-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>文档维护说明</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorial/instruction.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>文档维护说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>使用Sphinx + GitHub + ReadtheDocs 作为文档写作工具，用 Sphinx 生成文档，GitHub 托管文档，再导入到 ReadtheDocs。</p>
+<div class="section" id="sphinx">
+<h2>Sphinx<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h2>
+<p>Sphinx 是一种文档工具，它可以令人轻松的撰写出清晰且优美的文档。</p>
+<p><a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html">Sphinx使用手册</a></p>
+<p>首先安装sphinx及其依赖</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span> <span class="n">sphinx_rtd_theme</span> <span class="n">recommonmark</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">markdown</span><span class="o">-</span><span class="n">tables</span>
+</pre></div>
+</div>
+<p>已经建立好了仓库用来托管文档：<a class="reference external" href="https://github.com/Artemisaturn/ZRPlatform-docs">ZRPlatform-docs</a>，下拉项目到本地。</p>
+<p>（使用sphinx创建工程非常简单，有兴趣可以自行尝试）</p>
+<p>在根目录下编译文件（如果source有改动）：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>   <span class="c1"># 构建文档</span>
+</pre></div>
+</div>
+<p>用浏览器打开\build\html\index.html文件，可以预览效果</p>
+<p><strong>支持rst和markdown编写</strong></p>
+<p>在source下新增文档，要看index.rst文件是否包含该文档：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. 在source目录下直接添加的文件，hello可为.rst/.md</span>
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents
+   
+   hello
+
+<span class="cp">.. 在/source/tutorial下添加的文件，glob可将tutorial/下所有文件都包含进来</span>
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>   
+   <span class="nc">:caption:</span> Tutorial
+   <span class="nc">:glob:</span>
+   
+   tutorial/*
+
+<span class="cp">.. 在/source/test下添加文件（另一种非全局方式）</span>
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>   
+   <span class="nc">:caption:</span> Test
+   
+   test/test1
+</pre></div>
+</div>
+<p><a class="reference external" href="http://pandoc.org/try/">在线rst/md转换工具</a>，可以熟悉哪个用哪个</p>
+<p>编辑完成后编译文件，push到GitHub上，GitHub提供的webhook服务会自动完成网站的部署。</p>
+<p><a class="reference external" href="https://zrplatform-docs.readthedocs.io/zh_CN/latest/index.html">ReadtheDocs查阅</a></p>
+</div>
+<div class="section" id="githubreadthedocs">
+<h2>在GitHub里集成ReadtheDocs服务<a class="headerlink" href="#githubreadthedocs" title="永久链接至标题">¶</a></h2>
+<p>（仅记录，光使用的话看上面即可）</p>
+<p>Readthedocs支持Markdown格式和sphinx格式的文档排版，是部署项目文档的绝佳平台。利用Github的托管服务，我们可以方便地将文档托管于Github，并利用Readthedocs查阅。</p>
+<ol class="simple">
+<li><p>在Read the Docs上面注册一个账号</p></li>
+<li><p>登陆后关联你的GitHub，点击 “Import”可以导入项目（注：仅可以导入public项目）</p></li>
+<li><p>给该文档项目填写一个名字，并添加你在GitHub上面的工程HTTPS链接, 选择仓库类型为Git</p></li>
+<li><p>其他项目根据自己的需要填写后点击 “Create”，创建完后会自动去激活Webhooks，不用再去GitHub设置</p></li>
+<li><p>一切搞定，从此只要你往这个仓库push代码，readthedoc上面的文档就会自动更新</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../hello.html" class="btn btn-neutral float-left" title="hello world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, Artemisaturn
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
