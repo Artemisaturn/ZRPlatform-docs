@@ -11,6 +11,7 @@ Welcome to ZRPlatform-docs's documentation!
    :caption: Contents:
    
    hello
+   markdown
    
 .. toctree::   
    :caption: Test
