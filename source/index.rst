@@ -11,12 +11,18 @@ Welcome to ZRPlatform-docs's documentation!
    :caption: Contents
    
    hello
+   requirements
+   present_work
+   
    
 .. toctree::   
    :caption: Tutorial
-   :glob:
    
-   tutorial/*
+   tutorial/instruction
+   tutorial/Platform_Deployment
+   tutorial/test_the_front
+   tutorial/test_interface
+   tutorial/the_back_end
    
 .. toctree::   
    :caption: Interface

@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>重燃平台部署指南 &mdash; ZRPlatform-docs 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="接口文档" href="../interface/interface1.html" />
+    <link rel="prev" title="测试数据库接口文档" href="%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ZRPlatform-docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hello.html">hello world</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instruction.html">文档维护说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%90%8E%E7%AB%AFword%E6%89%8B%E5%86%8C%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%8F%8A%E5%89%8D%E7%AB%AF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95.html">后端word手册数据导入及前端用户登录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%BA%93%E5%89%8D%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html">测试数据库前端使用方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%BA%93%E5%89%8D%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html#id5">接口数据测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.html">测试数据库接口文档</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">重燃平台部署指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">平台结构介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">平台部署</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">后端相关环境软件安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">后端工程与数据库对接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">后端系统启动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">前端相关环境软件安装配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">前后端对接</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interface/interface1.html">接口文档</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Test</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../test/test1.html">Test1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ZRPlatform-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>重燃平台部署指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorial/重燃平台部署指南.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>重燃平台部署指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>平台结构介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>该网站平台需在__Windows系统__上部署，分为__前端__和__后端__。</p></li>
+<li><p>__后端__为基于Django搭建的数据管理平台，用于处理前端数据请求，并对数据进行增删改查操作。</p></li>
+<li><p>__前端__为基于VUE搭建的系统平台，用于用户对于材料信息的检索、比对，表格规范化展示数据，后期将和Ansys等仿真软件进行结合，通过平台材料数据直接进行仿真运行操作。</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>平台部署<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>平台部署依赖__Windows环境__，建议使用Windows10搭建。</p>
+<div class="section" id="id4">
+<h3>后端相关环境软件安装<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<ol class="simple">
+<li><p>安装Python</p></li>
+</ol>
+<p>本平台使用Python3.6.8进行部署</p>
+<ol class="simple">
+<li><p>安装mysql</p></li>
+<li><p>安装mongodb</p></li>
+</ol>
+<p>安装过程建议一路next，否则容易卡bug。</p>
+<p>另mongodb安装时，最后可能会卡很长时间，如发生卡死现象，可在安装过程中选择__不安装__mongodb compass，如下图所示。该程序为mongodb可视化界面，如不安装不会影响平台部署。</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x20c9c799966c6b1a4e303893e21a6d72?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMGM5Yzc5OTk2NmM2YjFhNGUzMDM4OTNlMjFhNmQ3MiJ9.-scvgdsPFKsSPKkvOWzgX-XEHJ8hfYfoUdAPDmyTzwQ&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x20c9c799966c6b1a4e303893e21a6d72?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMGM5Yzc5OTk2NmM2YjFhNGUzMDM4OTNlMjFhNmQ3MiJ9.-scvgdsPFKsSPKkvOWzgX-XEHJ8hfYfoUdAPDmyTzwQ&amp;download=image.png" /></p>
+<ol class="simple">
+<li><p>安装Redis</p></li>
+<li><p>安装Python依赖包</p></li>
+</ol>
+<p>请使用命令<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">–r</span> <span class="pre">requirements.txt</span></code>用需求文件进行安装，安装过程可能会报mod_wsgi相关错误，是因为没有安装Apache，可从requirements.txt中<strong>删除最后一行mod_wsgi的配置</strong>，保存后再次运行命令。</p>
+<p><strong>另请将txt文件中</strong><code class="docutils literal notranslate"><span class="pre">**simpleui==4.0.3**</span></code><strong>改为</strong><code class="docutils literal notranslate"><span class="pre">**django-simpleui==4.0.3**</span></code></p>
+<p>若安装过程缓慢，可使用命令：</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-i</span> <span class="pre">http://mirrors.aliyun.com/pypi/simple--trusted-host</span> <span class="pre">mirrors.aliyun.com</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span> </code></p>
+<p>来使用阿里的镜像。</p>
+</div>
+<div class="section" id="id5">
+<h3>后端工程与数据库对接<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>后端工程文件结构如下图所示：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111xb85ca76aa6bf5da1977972d5fc149eee?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiODVjYTc2YWE2YmY1ZGExOTc3OTcyZDVmYzE0OWVlZSJ9.PWC6fPAkKEBm4Q6IEv_b_87r8lqL5pym69wqY6EH9Jk&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xb85ca76aa6bf5da1977972d5fc149eee?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiODVjYTc2YWE2YmY1ZGExOTc3OTcyZDVmYzE0OWVlZSJ9.PWC6fPAkKEBm4Q6IEv_b_87r8lqL5pym69wqY6EH9Jk&amp;download=image.png" /></p>
+<p><strong>该对接过程讲解以此目录为根目录，进行文件说明。</strong></p>
+<ol class="simple">
+<li><p>配置数据库对接</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">在\ZRPlatform</span> <span class="pre">下，打开settings.py文件，进行数据库数据配置</span></code>。</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111xb0a6469e5d7fa52c83d580c7f4ffa9f3?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiMGE2NDY5ZTVkN2ZhNTJjODNkNTgwYzdmNGZmYTlmMyJ9.qZRlCjihngH-HZnN_bUlA27eBk2a1xcizf2TAp3PPME&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xb0a6469e5d7fa52c83d580c7f4ffa9f3?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiMGE2NDY5ZTVkN2ZhNTJjODNkNTgwYzdmNGZmYTlmMyJ9.qZRlCjihngH-HZnN_bUlA27eBk2a1xcizf2TAp3PPME&amp;download=image.png" /></p>
+<p>从上图可以看到，本平台使用了1个mongodb库（’ENGINE’: ‘djongo’）和两个Mysql库（’ENGINE’: ‘django.db.backends.mysql’）。数据库对接需要对Mysql数据库的用户密码进行修改（’PASSWORD’，上图中共有两处），以匹配安装Mysql数据库时的设定密码。</p>
+<ol class="simple">
+<li><p>Mysql数据库构建</p></li>
+</ol>
+<p>Django使用ORM架构进行数据库操作管理，无法直接建立数据库，所以需要将图中的两个Mysql库进行手动建立。（图中的两个数据名字分别是’NAME’: ‘zrplatform’以及’NAME’: ‘zrp_experiment_data’）。</p>
+<p>因为之前安装Mysql的时候同时安装了mysql workbench，这里展示如何用workbench进行配置。程序在系统任务栏可以看到：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111xa7f2adcc9f73a91b1553999e9badaa2a?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhhN2YyYWRjYzlmNzNhOTFiMTU1Mzk5OWU5YmFkYWEyYSJ9.2j9aoOTgUse_ZUfzTd17F39IMLFStS6Ho7xk7y8CDik&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xa7f2adcc9f73a91b1553999e9badaa2a?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhhN2YyYWRjYzlmNzNhOTFiMTU1Mzk5OWU5YmFkYWEyYSJ9.2j9aoOTgUse_ZUfzTd17F39IMLFStS6Ho7xk7y8CDik&amp;download=image.png" /></p>
+<p>双击打后，输入之前设置的密码，选择schemas栏，便可看到当前默认的数据库：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x985e0f51b5f4dbd0a5b7aeb799ca4d20?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5ODVlMGY1MWI1ZjRkYmQwYTViN2FlYjc5OWNhNGQyMCJ9.SFnxNpkEOCtNvHu_Stjk4paXqRI1f0w4GKqOLgl-dek&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x985e0f51b5f4dbd0a5b7aeb799ca4d20?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5ODVlMGY1MWI1ZjRkYmQwYTViN2FlYjc5OWNhNGQyMCJ9.SFnxNpkEOCtNvHu_Stjk4paXqRI1f0w4GKqOLgl-dek&amp;download=image.png" /></p>
+<p>这里选择添加数据库，根据后端要求，建立名称为’zrplatform’以及’zrp_experiment_data’的两个数据库：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x3411b990f7970092239f278117182fc3?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgzNDExYjk5MGY3OTcwMDkyMjM5ZjI3ODExNzE4MmZjMyJ9.3WnxcrICSOmYXayT7STEFT9t0CTtGatSDZ1PV-cb2U0&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x3411b990f7970092239f278117182fc3?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgzNDExYjk5MGY3OTcwMDkyMjM5ZjI3ODExNzE4MmZjMyJ9.3WnxcrICSOmYXayT7STEFT9t0CTtGatSDZ1PV-cb2U0&amp;download=image.png" /></p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111xf6d85c563f3c15f55bba43001ef78cbc?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhmNmQ4NWM1NjNmM2MxNWY1NWJiYTQzMDAxZWY3OGNiYyJ9.dmb8JrbREqmOQjknxZsSKr5Gd0llyibe3HZMsBLwOOk&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xf6d85c563f3c15f55bba43001ef78cbc?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhmNmQ4NWM1NjNmM2MxNWY1NWJiYTQzMDAxZWY3OGNiYyJ9.dmb8JrbREqmOQjknxZsSKr5Gd0llyibe3HZMsBLwOOk&amp;download=image.png" /></p>
+<p>建立好后便有了两个空数据库</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x4d3e2915f83350c2ef6678c9176fcdde?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg0ZDNlMjkxNWY4MzM1MGMyZWY2Njc4YzkxNzZmY2RkZSJ9.e_Qcb7P0_U9c8YoTlN94MydQVdtcJT3lo8w3V1SabrU&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x4d3e2915f83350c2ef6678c9176fcdde?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg0ZDNlMjkxNWY4MzM1MGMyZWY2Njc4YzkxNzZmY2RkZSJ9.e_Qcb7P0_U9c8YoTlN94MydQVdtcJT3lo8w3V1SabrU&amp;download=image.png" /></p>
+<ol class="simple">
+<li><p>数据库迁移</p></li>
+</ol>
+<p>我们共有3个数据库准备迁移，分别是默认数据库，以及’searchdb’和’experimentdb’如下图所示。</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x2996c975f158f01640bb0aaca9d8ceb6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyOTk2Yzk3NWYxNThmMDE2NDBiYjBhYWNhOWQ4Y2ViNiJ9.7_afDItwltmKvDV_y1f2uAk5eEEpGzpg0qBdAj6keNE&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x2996c975f158f01640bb0aaca9d8ceb6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyOTk2Yzk3NWYxNThmMDE2NDBiYjBhYWNhOWQ4Y2ViNiJ9.7_afDItwltmKvDV_y1f2uAk5eEEpGzpg0qBdAj6keNE&amp;download=image.png" /></p>
+<p>这里先简要介绍一下’searchdb’、’experimentdb’与’zrplatform’、’zrp_experiment_data’之间的关系。’searchdb’、’experimentdb’是django端对数据库的命名，而’zrplatform’、’zrp_experiment_data’是Mysql对数据库的明明，两者对接依靠settings.py里对数据库的配置进行。</p>
+<p>对于django来讲，数据库需要和django里的apps们进行绑定，该过程同样在settings.py内进行：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x0ae548c2d338c2574fc716e734dbb7d6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgwYWU1NDhjMmQzMzhjMjU3NGZjNzE2ZTczNGRiYjdkNiJ9.Acgow5TeFZnJ5R9cyY_TtJ4XPZEGm60A34iiFnY1Qas&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x0ae548c2d338c2574fc716e734dbb7d6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgwYWU1NDhjMmQzMzhjMjU3NGZjNzE2ZTczNGRiYjdkNiJ9.Acgow5TeFZnJ5R9cyY_TtJ4XPZEGm60A34iiFnY1Qas&amp;download=image.png" /></p>
+<p>可以看到，名为Data的app其数据库被绑定在了searchdb中，而app ’MeasuringData’使用了数据库’experimentdb’，本平台不只有这两个app，其他的apps使用额数据库是’default’，即mongodb中。</p>
+<p>为分别进行三个数据库的迁移，需在__根目录__下运用命令行分别运行以下命令：</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">makemigrations</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">makemigrations</span> <span class="pre">Data</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span> <span class="pre">--database=searchdb</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">makemigrations</span> <span class="pre">MeasuringData</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span> <span class="pre">--database=experimentdb</span></code></p>
+<p>不难看出以上命令两个为一组，分别对default和两个自定义数据库进行迁移。关于manage.py、makemigrations和migrate的意义，欢迎百度一下看看。这里可以简单理解为，先从平台所带有的数据库模型代码make出可用于对数据库执行的程序，然后用这些程序migrate表到数据库中，实现两边的同步。</p>
+<p>完成数据库迁移后，mysql结构如图所示：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x68f570c15d519a2c60571e9e59a0d66a?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg2OGY1NzBjMTVkNTE5YTJjNjA1NzFlOWU1OWEwZDY2YSJ9.uQ7laxn_o4RFphiYl1J2TGJ7kpGNrGbbXRZILb3Uk6s&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x68f570c15d519a2c60571e9e59a0d66a?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg2OGY1NzBjMTVkNTE5YTJjNjA1NzFlOWU1OWEwZDY2YSJ9.uQ7laxn_o4RFphiYl1J2TGJ7kpGNrGbbXRZILb3Uk6s&amp;download=image.png" /></p>
+</div>
+<div class="section" id="id6">
+<h3>后端系统启动<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<ol class="simple">
+<li><p>创建超级用户</p></li>
+</ol>
+<p>为进行后端平台访问，需先创建一超级用户。使用以下命令创建：</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">createsuperuser</span></code></p>
+<p>设置用户名和密码，无需给出邮箱，如图所示：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x22173930c2697c0edbf0bf57ea436258?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMjE3MzkzMGMyNjk3YzBlZGJmMGJmNTdlYTQzNjI1OCJ9.I7a90KAkUIuPcYN1PDZBtXE9YbC2BD2lorbXPF3bJ_0&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x22173930c2697c0edbf0bf57ea436258?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMjE3MzkzMGMyNjk3YzBlZGJmMGJmNTdlYTQzNjI1OCJ9.I7a90KAkUIuPcYN1PDZBtXE9YbC2BD2lorbXPF3bJ_0&amp;download=image.png" /></p>
+<ol class="simple">
+<li><p>启动系统</p></li>
+</ol>
+<p>使用命令</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p>
+<p>启动系统：</p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x934eff203632e3f62da92f7f7b585b57?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5MzRlZmYyMDM2MzJlM2Y2MmRhOTJmN2Y3YjU4NWI1NyJ9.nH-N8Gkg7VB9pkTqeyrWfqYDQ2BfniWD7ACeUWAzZQA&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x934eff203632e3f62da92f7f7b585b57?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5MzRlZmYyMDM2MzJlM2Y2MmRhOTJmN2Y3YjU4NWI1NyJ9.nH-N8Gkg7VB9pkTqeyrWfqYDQ2BfniWD7ACeUWAzZQA&amp;download=image.png" /></p>
+<ol class="simple">
+<li><p>访问后端</p></li>
+</ol>
+<p>推荐使用chrome或firefox浏览器对后端进行访问，网址为：</p>
+<p><a class="reference external" href="http://127.0.0.1:8000/admin">http://127.0.0.1:8000/admin</a></p>
+<p><img alt="https://tcs-ga.teambition.net/storage/111xf6cfb421c14644a1fadf55fc15597877?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhmNmNmYjQyMWMxNDY0NGExZmFkZjU1ZmMxNTU5Nzg3NyJ9.zyS4QbMSC8yYwdUiFiYUIcejbCioDp1DYXX0iDYVnBA&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xf6cfb421c14644a1fadf55fc15597877?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhmNmNmYjQyMWMxNDY0NGExZmFkZjU1ZmMxNTU5Nzg3NyJ9.zyS4QbMSC8yYwdUiFiYUIcejbCioDp1DYXX0iDYVnBA&amp;download=image.png" /></p>
+<p>输入超级用户的用户名和密码便可进入，至此后端配置成功。</p>
+</div>
+<div class="section" id="id7">
+<h3>前端相关环境软件安装配置<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>请从<a class="reference external" href="https://nodejs.org/">https://nodejs.org/</a>下载nodejs安装（本教程中为12.18版本），并安装</p>
+<p>前端根目录如图所示，<strong>前端介绍时以此目录为根目录</strong>：</p>
+<p><img alt="file:///C:/Users/john/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" src="file:///C:/Users/john/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" /></p>
+<p>在此目录下打开命令行，输入</p>
+<p>npm run dev</p>
+<p>即可运行前端程序（<a class="reference external" href="http://127.0.0.1:8080">http://127.0.0.1:8080</a>）</p>
+</div>
+<div class="section" id="id8">
+<h3>前后端对接<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>前端会向后端发送数据请求，故需配置发送地址。</p>
+<ol class="simple">
+<li><p>在/src/components/global.vue中，将服务器地址改为后端地址：</p></li>
+</ol>
+<p><img alt="https://tcs-ga.teambition.net/storage/111x573f929a2fb5e8d90badbfa1db99ebdf?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg1NzNmOTI5YTJmYjVlOGQ5MGJhZGJmYTFkYjk5ZWJkZiJ9.Mga1lWmtLbprbYAF3wHzDxjUqAfuBQ0zsTFqtrt0HKA&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x573f929a2fb5e8d90badbfa1db99ebdf?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg1NzNmOTI5YTJmYjVlOGQ5MGJhZGJmYTFkYjk5ZWJkZiJ9.Mga1lWmtLbprbYAF3wHzDxjUqAfuBQ0zsTFqtrt0HKA&amp;download=image.png" /></p>
+<ol class="simple">
+<li><p>将/src/resfulapi/api.js中的数据请求地址改为相应路由地址</p></li>
+</ol>
+<p><img alt="https://tcs-ga.teambition.net/storage/111xdc56e30c3758a020ffc2ef07aa8f09ef?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhkYzU2ZTMwYzM3NThhMDIwZmZjMmVmMDdhYThmMDllZiJ9.y9a-7kOGIeRxM3npFzplYPazbF4mPFymyv7kOl3gjHM&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xdc56e30c3758a020ffc2ef07aa8f09ef?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhkYzU2ZTMwYzM3NThhMDIwZmZjMmVmMDdhYThmMDllZiJ9.y9a-7kOGIeRxM3npFzplYPazbF4mPFymyv7kOl3gjHM&amp;download=image.png" /></p>
+<p><em><strong>修正</strong></em>：</p>
+<p>至此前后端连接完成，整体平台环境搭建完成。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../interface/interface1.html" class="btn btn-neutral float-right" title="接口文档" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.html" class="btn btn-neutral float-left" title="测试数据库接口文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, Artemisaturn
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
