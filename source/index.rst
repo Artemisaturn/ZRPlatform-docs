@@ -8,11 +8,11 @@ Welcome to ZRPlatform-docs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: Working Process
    
-   hello
-   requirements
-   present_work
+   work/requirements
+   work/present_work
+   work/done
    
    
 .. toctree::   
