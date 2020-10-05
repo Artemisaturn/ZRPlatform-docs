@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<html class="writer-html4" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -38,7 +38,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="重燃平台部署指南" href="Platform_Deployment.html" />
-    <link rel="prev" title="当前工作" href="../present_work.html" /> 
+    <link rel="prev" title="已完成工作记录" href="../work/done.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,11 +83,11 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents</span></p>
+              <p class="caption"><span class="caption-text">Working Process</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../hello.html">hello world</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../requirements.html">待改进需求</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../present_work.html">当前工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/requirements.html">待改进需求</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/present_work.html">当前工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/done.html">已完成工作记录</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul class="current">
@@ -104,6 +104,7 @@
 <p class="caption"><span class="caption-text">Interface</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../interface/interface1.html">接口文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/material_interface_plan.html">材料数据库接口调研</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Test</span></p>
 <ul>
@@ -195,21 +196,21 @@
 <p>在source下新增文档，要看index.rst文件是否包含该文档：</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. 在source目录下直接添加的文件，hello可为.rst/.md</span>
 <span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
-   <span class="nc">:maxdepth:</span> 2
-   <span class="nc">:caption:</span> Contents
+   <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+   <span class="nc">:caption:</span> <span class="nf">Contents</span>
    
    hello
 
 <span class="cp">.. 在/source/tutorial下添加的文件，glob可将tutorial/下所有文件都包含进来</span>
 <span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>   
-   <span class="nc">:caption:</span> Tutorial
+   <span class="nc">:caption:</span> <span class="nf">Tutorial</span>
    <span class="nc">:glob:</span>
    
    tutorial/*
 
 <span class="cp">.. 在/source/test下添加文件（另一种非全局方式）</span>
 <span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>   
-   <span class="nc">:caption:</span> Test
+   <span class="nc">:caption:</span> <span class="nf">Test</span>
    
    test/test1
 </pre></div>
@@ -223,11 +224,11 @@
 <p>（仅记录，光使用的话看上面即可）</p>
 <p>Readthedocs支持Markdown格式和sphinx格式的文档排版，是部署项目文档的绝佳平台。利用Github的托管服务，我们可以方便地将文档托管于Github，并利用Readthedocs查阅。</p>
 <ol class="simple">
-<li><p>在Read the Docs上面注册一个账号</p></li>
-<li><p>登陆后关联你的GitHub，点击 “Import”可以导入项目（注：仅可以导入public项目）</p></li>
-<li><p>给该文档项目填写一个名字，并添加你在GitHub上面的工程HTTPS链接, 选择仓库类型为Git</p></li>
-<li><p>其他项目根据自己的需要填写后点击 “Create”，创建完后会自动去激活Webhooks，不用再去GitHub设置</p></li>
-<li><p>一切搞定，从此只要你往这个仓库push代码，readthedoc上面的文档就会自动更新</p></li>
+<li>在Read the Docs上面注册一个账号</li>
+<li>登陆后关联你的GitHub，点击 “Import”可以导入项目（注：仅可以导入public项目）</li>
+<li>给该文档项目填写一个名字，并添加你在GitHub上面的工程HTTPS链接, 选择仓库类型为Git</li>
+<li>其他项目根据自己的需要填写后点击 “Create”，创建完后会自动去激活Webhooks，不用再去GitHub设置</li>
+<li>一切搞定，从此只要你往这个仓库push代码，readthedoc上面的文档就会自动更新</li>
 </ol>
 </div>
 </div>
@@ -243,7 +244,7 @@
         <a href="Platform_Deployment.html" class="btn btn-neutral float-right" title="重燃平台部署指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../present_work.html" class="btn btn-neutral float-left" title="当前工作" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../work/done.html" class="btn btn-neutral float-left" title="已完成工作记录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
