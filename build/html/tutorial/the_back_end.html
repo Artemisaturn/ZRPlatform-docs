@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="zh-CN" >
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -184,7 +184,7 @@
 <p>当前平台后端支持将word文档导入系统，并存入数据库，已实现该功能，需在部署了后端平台的电脑上<strong>同时安装有word</strong>。当前提供<a class="reference external" href="https://thoughts.teambition.com/workspaces/5f2f6c3a0c95000016c64ea2/files/5f606813e6eed50001f62be2"><strong>测试用word文档</strong></a>供大家尝试。</p>
 <p>注：一定要事先按照<a class="reference external" href="https://thoughts.teambition.com/workspaces/5f2f6c3a0c95000016c64ea2/docs/5f5216c1e6eed50001b9f26e"><strong>平台部署指南</strong></a>，做好前后端接口（共两处），且在ip地址前加上**http://  **(例如 http://127.0.0.1:8000)，否则会出现图片无法识别的情况。</p>
 <ul class="simple">
-<li>进入材料管理界面，可看到有word导入按钮，选择<a class="reference external" href="https://thoughts.teambition.com/workspaces/5f2f6c3a0c95000016c64ea2/files/5f606813e6eed50001f62be2"><strong>测试用word文档</strong></a>，进行导入。<strong>导入过程较为缓慢，请耐心等待。</strong></li>
+<li><p>进入材料管理界面，可看到有word导入按钮，选择<a class="reference external" href="https://thoughts.teambition.com/workspaces/5f2f6c3a0c95000016c64ea2/files/5f606813e6eed50001f62be2"><strong>测试用word文档</strong></a>，进行导入。<strong>导入过程较为缓慢，请耐心等待。</strong></p></li>
 </ul>
 <p><img alt="https://tcs-ga.teambition.net/storage/111x9e3e57c2b04d6b2f0bd485aabc89383d?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzA5OCwiaWF0IjoxNjAxMzk4Mjk4LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5ZTNlNTdjMmIwNGQ2YjJmMGJkNDg1YWFiYzg5MzgzZCJ9.lLLkdHUPTcmsJXYHqltu_bRM5q27-T8SPf226lz15dw&amp;download=%E6%88%AA%E5%B1%8F2020-09-15%20%E4%B8%8B%E5%8D%883.13.37.png" src="https://tcs-ga.teambition.net/storage/111x9e3e57c2b04d6b2f0bd485aabc89383d?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzA5OCwiaWF0IjoxNjAxMzk4Mjk4LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5ZTNlNTdjMmIwNGQ2YjJmMGJkNDg1YWFiYzg5MzgzZCJ9.lLLkdHUPTcmsJXYHqltu_bRM5q27-T8SPf226lz15dw&amp;download=%E6%88%AA%E5%B1%8F2020-09-15%20%E4%B8%8B%E5%8D%883.13.37.png" /></p>
 <p>导入后有如下所示效果：</p>
@@ -192,7 +192,7 @@
 <p>刷新页面，可看到导入数据：</p>
 <p><img alt="https://tcs-ga.teambition.net/storage/111xcd69797cd750d9237eff2fea9a1934c9?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzA5OCwiaWF0IjoxNjAxMzk4Mjk4LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhjZDY5Nzk3Y2Q3NTBkOTIzN2VmZjJmZWE5YTE5MzRjOSJ9.rhdX838yyI8PFYTE8K7JTsOICBoYcB0tRJ3XQSafSJQ&amp;download=%E6%88%AA%E5%B1%8F2020-09-15%20%E4%B8%8B%E5%8D%883.20.56.png" src="https://tcs-ga.teambition.net/storage/111xcd69797cd750d9237eff2fea9a1934c9?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzA5OCwiaWF0IjoxNjAxMzk4Mjk4LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhjZDY5Nzk3Y2Q3NTBkOTIzN2VmZjJmZWE5YTE5MzRjOSJ9.rhdX838yyI8PFYTE8K7JTsOICBoYcB0tRJ3XQSafSJQ&amp;download=%E6%88%AA%E5%B1%8F2020-09-15%20%E4%B8%8B%E5%8D%883.20.56.png" /></p>
 <ul class="simple">
-<li>搜索材料牌号为“20”的材料，单击进入</li>
+<li><p>搜索材料牌号为“20”的材料，单击进入</p></li>
 </ul>
 <p><img alt="https://tcs-ga.teambition.net/storage/111xd9929ac7bb590b398957f37c783aa331?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzA5OCwiaWF0IjoxNjAxMzk4Mjk4LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhkOTkyOWFjN2JiNTkwYjM5ODk1N2YzN2M3ODNhYTMzMSJ9.GN7HzUlyqVqOTFJn9anWT2Ee9g75RFQ5v82lcBfzibs&amp;download=%E6%88%AA%E5%B1%8F2020-09-15%20%E4%B8%8B%E5%8D%883.22.41.png" src="https://tcs-ga.teambition.net/storage/111xd9929ac7bb590b398957f37c783aa331?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzA5OCwiaWF0IjoxNjAxMzk4Mjk4LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhkOTkyOWFjN2JiNTkwYjM5ODk1N2YzN2M3ODNhYTMzMSJ9.GN7HzUlyqVqOTFJn9anWT2Ee9g75RFQ5v82lcBfzibs&amp;download=%E6%88%AA%E5%B1%8F2020-09-15%20%E4%B8%8B%E5%8D%883.22.41.png" /></p>
 <p>可以看到内部word文档里的对应条目在导入后的情况：</p>
@@ -229,7 +229,7 @@
 <p>C:\Windows\SysWOW64\config\systemprofile\Desktop</p>
 <p>C:\Windows\System32\config\systemprofile\Desktop</p>
 <ul class="simple">
-<li>出现bug的极有可能和word版本有关，目前已知2016和Office365不会报错，2013可能会报错</li>
+<li><p>出现bug的极有可能和word版本有关，目前已知2016和Office365不会报错，2013可能会报错</p></li>
 </ul>
 </div>
 </div>

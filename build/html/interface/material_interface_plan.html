@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>接口文档 &mdash; ZRPlatform-docs 0.0.1 文档</title>
+  <title>材料数据库接口调研 &mdash; ZRPlatform-docs 0.0.1 文档</title>
   
 
   
@@ -37,8 +37,8 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="材料数据库接口调研" href="material_interface_plan.html" />
-    <link rel="prev" title="后端word手册数据导入及前端用户登录" href="../tutorial/the_back_end.html" /> 
+    <link rel="next" title="Test1" href="../test/test1.html" />
+    <link rel="prev" title="接口文档" href="interface1.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,8 +99,16 @@
 </ul>
 <p class="caption"><span class="caption-text">Interface</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">接口文档</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_interface_plan.html">材料数据库接口调研</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface1.html">接口文档</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">材料数据库接口调研</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">现有接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">待开发接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">细化粒度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">结构调整</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Test</span></p>
 <ul>
@@ -151,13 +159,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>接口文档</li>
+      <li>材料数据库接口调研</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/interface/interface1.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/interface/material_interface_plan.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,8 +179,49 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>接口文档<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>接口文档在这里写</p>
+<h1>材料数据库接口调研<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>现有接口<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>除上传下载、模板生成等接口外，每个model都有相应的接口：</p>
+<ul class="simple">
+<li><p>CategoryView
+返回所有的材料种类</p></li>
+<li><p>SourceView
+返回所有的数据来源</p></li>
+<li><p>MaterialView
+返回根据材料种类、数据来源、查询条件筛选的材料</p></li>
+<li><p>MaterialDetailView
+返回根据材料id的材料详情</p></li>
+<li><p>MaterialPhyAndCheView
+返回根据材料id的物理化学性能</p></li>
+<li><p>MaterialMechanicsView
+返回根据材料id的力学性能</p></li>
+<li><p>MaterialStruAndPerfView
+返回根据材料id的组织结构和工艺性能</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>待开发接口<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h3>细化粒度<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>实现同时浏览不同性能部分的功能</p>
+<p>跨表</p>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>结构调整<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>后续会把结构组织和工艺性能分表，需要单独编写这两部分的接口：</p>
+<ol class="simple">
+<li><p>MaterialStructureView</p></li>
+<li><p>MaterialPerformanceView</p></li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -183,10 +232,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="material_interface_plan.html" class="btn btn-neutral float-right" title="材料数据库接口调研" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../test/test1.html" class="btn btn-neutral float-right" title="Test1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../tutorial/the_back_end.html" class="btn btn-neutral float-left" title="后端word手册数据导入及前端用户登录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interface1.html" class="btn btn-neutral float-left" title="接口文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
