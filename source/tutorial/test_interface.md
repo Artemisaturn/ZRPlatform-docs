@@ -190,7 +190,93 @@
 
 - 备注：
 
-### 
+### 获取材料主表中所有信息
+
+- `**请求方法**`：POST
+
+- `**接口地址**`/measuringData/getAll
+
+- 入参：
+
+无需入参
+
+- 出参：
+
+// 自动遍历材料主表，获得材料主表中的所有信息，并且有title_mapping
+
+```json
+{
+    "code": 200,
+    "message": "",
+    "title_mapping": [
+        "材料基本信息",
+        {
+            "name": "材料牌号",
+            "parts": "部件",
+            "category": "材料类别",
+            "intensity_grade": "强度等级",
+            "direction": "材料方向",
+            "standard": "材料标准",
+            "remarks": "备注"
+        }
+    ],
+    "data": [
+        {
+            "id": 1,
+            "name": "DZ101",
+            "parts": null,
+            "category": null,
+            "intensity_grade": null,
+            "direction": null,
+            "standard": null,
+            "remarks": null
+        },
+        {
+            "id": 2,
+            "name": "DZ102",
+            "parts": null,
+            "category": null,
+            "intensity_grade": null,
+            "direction": null,
+            "standard": null,
+            "remarks": null
+        },
+        {
+            "id": 3,
+            "name": "DZ103",
+            "parts": null,
+            "category": null,
+            "intensity_grade": null,
+            "direction": null,
+            "standard": null,
+            "remarks": null
+        },
+        {
+            "id": 4,
+            "name": "DZ104",
+            "parts": null,
+            "category": null,
+            "intensity_grade": null,
+            "direction": null,
+            "standard": null,
+            "remarks": null
+        },
+        {
+            "id": 5,
+            "name": "DZ106",
+            "parts": null,
+            "category": null,
+            "intensity_grade": null,
+            "direction": null,
+            "standard": null,
+            "remarks": null
+        }
+    ]
+}
+```
+
+备注：如果只想获取材料牌号，那么通过该接口获得数据后，自行处理即可
+
 
 ### TODO:增加数据
 
