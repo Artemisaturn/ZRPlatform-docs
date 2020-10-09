@@ -21,7 +21,6 @@ Welcome to ZRPlatform-docs's documentation!
    tutorial/instruction
    tutorial/Platform_Deployment
    tutorial/test_the_front
-   tutorial/test_interface
    tutorial/the_back_end
    
 .. toctree::   
@@ -29,6 +28,12 @@ Welcome to ZRPlatform-docs's documentation!
    :glob:
    
    interface/*
+   
+.. toctree::   
+   :caption: Development
+   :glob:
+   
+   development/*
    
 .. toctree::   
    :caption: Test

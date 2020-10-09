@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>测试数据库接口文档 &mdash; ZRPlatform-docs 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="材料数据库接口调研" href="material_interface_plan.html" />
+    <link rel="prev" title="后端word手册数据导入及前端用户登录" href="../tutorial/the_back_end.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ZRPlatform-docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Working Process</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../work/requirements.html">待改进需求</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/present_work.html">当前工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/done.html">已完成工作记录</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/instruction.html">文档维护说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/Platform_Deployment.html">重燃平台部署指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/test_the_front.html">测试数据库前端使用方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/the_back_end.html">后端word手册数据导入及前端用户登录</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Interface</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">测试数据库接口文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">导出测试数据库中所有表名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">按材料牌号和表名查询数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">按材料牌号和表名查询数据-多级表头</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">获取材料主表中所有信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo">TODO:增加数据</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id6">手册数据库接口文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id7">TODO:增加数据</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="material_interface_plan.html">材料数据库接口调研</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/development.html">???ǿ????ĵ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Test</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../test/test1.html">Test1</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ZRPlatform-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>测试数据库接口文档</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/interface/manual_and_measuring.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>测试数据库接口文档<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><strong>说明：</strong></p>
+<p>所有url前面省略<a class="reference external" href="http://127.0.0.1:8000/api/v1"><strong>http://127.0.0.1:8000/api/v1</strong></a></p>
+<div class="section" id="id2">
+<h2>导出测试数据库中所有表名<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">**请求方法**</span></code>：POST</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**接口地址**</span></code>/measuringData/getIndexes</p></li>
+<li><p>入参：</p></li>
+</ul>
+<p>无需入参</p>
+<ul class="simple">
+<li><p>出参：</p></li>
+</ul>
+<p>// 自动遍历数据库所有表，获取其中所有表名</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;material&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;材料主表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;elastic_parameter&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;弹性参数表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;physical_parameter&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;物理参数表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;tensile_property&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;拉伸性能表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;creep_property&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;蠕变性能表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;low_cycle_fatigue_parameter&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;低周疲劳参数表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;hill_stress_coefficient&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Hill应力系数表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;hcf&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Hcf表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;cyclic_stress_strain_curve&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;循环应力应变曲线表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;crack_propagation&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;裂纹扩展表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;oxidation_resistance&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;抗氧化性能表&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;stress_amplitude&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;应力幅值表&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>备注：表名的value可以用来继续post到/measuringData/tableContents接口，获取某材料牌号的相关数据</p>
+</div>
+<div class="section" id="id3">
+<h2>按材料牌号和表名查询数据<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">**请求方法**</span></code>：POST</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**接口地址**</span></code>/measuringData/tableContents</p></li>
+<li><p>入参：</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="nt">&quot;brand_name&quot;</span><span class="p">:</span><span class="s2">&quot;材料牌号&quot;</span><span class="p">,</span>
+	<span class="nt">&quot;search_attribute&quot;</span><span class="p">:</span><span class="s2">&quot;表名&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>出参：</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+	&quot;code&quot;: 200,
+	&quot;message&quot;:&quot;&quot;,
+	// **table_name** 显示请求表的中文名称
+	&quot;table_name&quot;:&quot;table name Chinese&quot;,
+	// **title_mapping** 用于做表头名称映射
+	&quot;title_mapping&quot;:{ // 表头变量名：中文名称
+		&quot;title1&quot;:&quot;verbose_name1&quot;,
+		&quot;title2&quot;:&quot;verbose_name2&quot;,
+		...
+	},
+	// **data** 所对应数组为每一条被查询到的数据
+	&quot;data&quot;:[
+		{ // 第一条数据
+			&quot;title1&quot;:&quot;value1of1&quot;,
+			&quot;title2&quot;:&quot;value2of1&quot;,
+			...
+		},
+		{ // 第二条数据
+			&quot;title1&quot;:&quot;value1of2&quot;,
+			&quot;title2&quot;:&quot;value2of2&quot;,
+			...
+
+		},
+			... // 其余条目
+	]
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>备注：</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>按材料牌号和表名查询数据-多级表头<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">**请求方法**</span></code>：POST</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**接口地址**</span></code>/measuringData/tableContents</p></li>
+<li><p>入参：</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+	<span class="nt">&quot;brand_name&quot;</span><span class="p">:</span><span class="s2">&quot;材料牌号&quot;</span><span class="p">,</span>
+	<span class="nt">&quot;search_attribute&quot;</span><span class="p">:</span><span class="s2">&quot;表名&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>出参：</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+	&quot;code&quot;: 200,
+	&quot;message&quot;:&quot;&quot;,
+	// **table_name** 显示请求表的中文名称
+	&quot;table_name&quot;:&quot;table name Chinese&quot;,
+	// **title_mapping** 用于做表头名称映射
+	&quot;title_mapping&quot;:{ // 遍历 一级表头
+		&quot;title1&quot;:
+		{
+			&quot;verbose_name&quot;: &quot;verbose_name1&quot;，
+			&quot;children&quot;:[ // 遍历 二级表头
+			{
+				&quot;title1of1&quot;:{
+					&quot;verbose_name&quot;:&quot;verbose_name1of1&quot;,
+					&quot;children&quot;:[...] // 遍历 三级表头
+				},
+				&quot;title2of1&quot;:{...}
+			},
+				...
+			],
+		},
+		&quot;title2&quot;:{...},
+		...
+	},
+	// **data** 所对应数组为每一条被查询到的数据
+	&quot;data&quot;:[
+		{ // 第一条数据
+			&quot;title1&quot;:&quot;value1of1&quot;,
+			&quot;title2&quot;:&quot;value2of1&quot;,
+			...
+		},
+		{ // 第二条数据
+			&quot;title1&quot;:&quot;value1of2&quot;,
+			&quot;title2&quot;:&quot;value2of2&quot;,
+			...
+
+		},
+		... // 其余条目
+	]
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>备注：</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>获取材料主表中所有信息<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">**请求方法**</span></code>：POST</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**接口地址**</span></code>/measuringData/getAll</p></li>
+<li><p>入参：</p></li>
+</ul>
+<p>无需入参</p>
+<ul class="simple">
+<li><p>出参：</p></li>
+</ul>
+<p>// 自动遍历材料主表，获得材料主表中的所有信息，并且有title_mapping</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;title_mapping&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;材料基本信息&quot;</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;材料牌号&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:</span> <span class="s2">&quot;部件&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;材料类别&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;intensity_grade&quot;</span><span class="p">:</span> <span class="s2">&quot;强度等级&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="s2">&quot;材料方向&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;standard&quot;</span><span class="p">:</span> <span class="s2">&quot;材料标准&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;remarks&quot;</span><span class="p">:</span> <span class="s2">&quot;备注&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DZ101&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;intensity_grade&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;standard&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;remarks&quot;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DZ102&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;intensity_grade&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;standard&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;remarks&quot;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DZ103&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;intensity_grade&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;standard&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;remarks&quot;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DZ104&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;intensity_grade&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;standard&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;remarks&quot;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DZ106&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;intensity_grade&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;direction&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;standard&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;remarks&quot;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>备注：如果只想获取材料牌号，那么通过该接口获得数据后，自行处理即可</p>
+</div>
+<div class="section" id="todo">
+<h2>TODO:增加数据<a class="headerlink" href="#todo" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+<div class="section" id="id6">
+<h1>手册数据库接口文档<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id7">
+<h2>TODO:增加数据<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="material_interface_plan.html" class="btn btn-neutral float-right" title="材料数据库接口调研" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tutorial/the_back_end.html" class="btn btn-neutral float-left" title="后端word手册数据导入及前端用户登录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, Artemisaturn
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
