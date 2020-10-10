@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<html class="writer-html4" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -88,12 +88,13 @@
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">待改进需求</a></li>
 <li class="toctree-l1"><a class="reference internal" href="present_work.html">当前工作</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">已完成工作记录</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">10.6 工作总结</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">前端用户注册机制改进 -&gt; 王佳敏</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">去掉冗余数据库 -&gt; 张田雨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">前端头像地址修改&amp;增加多级表头 -&gt; 李长泰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">10.6 工作总结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">前端用户注册机制改进 -&gt; 王佳敏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">去掉冗余数据库 -&gt; 张田雨</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#word">word文档导入与后端材料添加相统一</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">将第三版手册倒入手册数据库中</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">9.24目标进度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">将第三版手册倒入手册数据库中</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">9.24目标进度</a></li>
 </ul>
 </li>
 </ul>
@@ -112,7 +113,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../development/development.html">???ǿ????ĵ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/development.html">这是开发文档</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Test</span></p>
 <ul>
@@ -185,7 +186,14 @@
   <div class="section" id="id1">
 <h1>已完成工作记录<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id2">
-<h2>10.6 工作总结<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>前端头像地址修改&amp;增加多级表头 -&gt; 李长泰<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ol class="simple">
+<li>在后端将前端登录时发送的头像图标地址改为http://202.204.62.114:8000/media/avatar.png ；</li>
+<li>在MeasuringData模块中新增了multi_level_header.py ，添加了三个多级表头样式供前端使用</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>10.6 工作总结<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>W: 创建了公用后端虚拟机，方便接口调用
 校园网访问后端：http://202.204.62.114:8000/admin
 用户名密码都是root</p>
@@ -196,27 +204,27 @@
 <p>Z: 完成了测试数据库排序修改的测试
 明天去面试了，祝好运</p>
 </div>
-<div class="section" id="id3">
-<h2>前端用户注册机制改进 -&gt; 王佳敏<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h2>前端用户注册机制改进 -&gt; 王佳敏<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>取消身份证验证，改为工号、手机号等。集体<strong>需沟通</strong>。</p>
 </div>
-<div class="section" id="id4">
-<h2>去掉冗余数据库 -&gt; 张田雨<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h2>去掉冗余数据库 -&gt; 张田雨<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <ol class="simple">
-<li><p>去掉性能数据管理的库</p></li>
-<li><p>去掉手册数据库</p></li>
-<li><p>将材料管理数据库（Material）名称变为手册数据库，并将其中的测试数据库删除</p></li>
+<li>去掉性能数据管理的库</li>
+<li>去掉手册数据库</li>
+<li>将材料管理数据库（Material）名称变为手册数据库，并将其中的测试数据库删除</li>
 </ol>
 <p>原则上保留用户管理数据库（前端和后端分别一个）、材料测试数据库、手册数据库，共4个库，之后预计添加2个数据库</p>
 </div>
 <div class="section" id="word">
 <h2>word文档导入与后端材料添加相统一<a class="headerlink" href="#word" title="永久链接至标题">¶</a></h2>
 </div>
-<div class="section" id="id5">
-<h2>将第三版手册倒入手册数据库中<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-</div>
 <div class="section" id="id6">
-<h2>9.24目标进度<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<h2>将第三版手册倒入手册数据库中<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id7">
+<h2>9.24目标进度<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>手册数据库完善，录入第三册数据</p>
 <p>链接应用展示</p>
 <p>注册登录模块展示</p>
