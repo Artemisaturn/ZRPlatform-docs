@@ -1,0 +1,58 @@
+#测试文档
+
+## 1010测试_多级表头_遍历主表API测试
+### 测试多级表头
+#### 测试 multi_level_header 中 多级表头 elastic_parameter/physical_parameter/tensile_property；
+
+Postman测试正常；（..回头研究一下怎么把Postman生成的JSON文档弄过来）
+
+#### 测试 multi_level_header 中 不存在的表头是否工作正常；
+即除 elastic_parameter/physical_parameter/tensile_property/creep_property/low_cycle_fatigue_parameter/hill_stress_coefficient/hcf/stress_amplitude等
+
+Postman测试非正常；
+
+*KeyError at /api/v1/measuringData/tableContents
+'creep_property'
+
+Request Method: POST
+Request URL: http://202.204.62.114:8000/api/v1/measuringData/tableContents*
+
+分析原因：
+
+       return Response({
+            'code': 200,
+            'message': '',
+            'table_name': model_verbose_name,
+            'title_mapping': title_mapping,
+            'multi_level_header': multi_level_header[table_name],
+            'data': serializer.data,
+        })
+
+multi_level_header中仅有elastic_parameter/physical_parameter/tensile_property表头的信息，而views.py中return Response 针对的为 除 材料主表表头 的其他信息，multi_level_header[table_name],遇到elastic_parameter/physical_parameter/tensile_property/creep_property……会报错。
+
+*……
+File "E:\environment\python\lib\site-packages\rest_framework\views.py" in raise_uncaught_exception
+  476.         raise exc
+
+File "E:\environment\python\lib\site-packages\rest_framework\views.py" in dispatch
+  502.             response = handler(request, *args, **kwargs)
+
+File "E:\ZRP\ZRPlatform-server\apps\MeasuringData\views.py" in post
+  137.             'multi_level_header': multi_level_header[table_name],
+
+Exception Type: KeyError at /api/v1/measuringData/tableContents
+Exception Value: 'creep_property'
+Request information:
+USER: AnonymousUser *
+
+###测试遍历API
+
+
+urls.py中缺少路径 getALL;添加后功能正常；
+
+urlpatterns = [
+    path('getIndexes', GetIndexesView.as_view()),
+    path('tableContents', TableView.as_view()),
+    path('getAll',GetAllBrandName.as_view()),
+    # path('advanceSearch', DataView.as_view()),
+]
