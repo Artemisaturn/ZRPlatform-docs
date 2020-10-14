@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<html class="writer-html4" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -86,8 +86,8 @@
               <p class="caption"><span class="caption-text">Working Process</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../work/present_work.html">当前工作</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../work/requirements.html">待改进需求</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../work/done.html">已完成工作记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/requirements.html">待改进需求</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul class="current">
@@ -191,9 +191,9 @@
 <div class="section" id="id2">
 <h2>平台结构介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><p>该网站平台需在__Windows系统__上部署，分为__前端__和__后端__。</p></li>
-<li><p>__后端__为基于Django搭建的数据管理平台，用于处理前端数据请求，并对数据进行增删改查操作。</p></li>
-<li><p>__前端__为基于VUE搭建的系统平台，用于用户对于材料信息的检索、比对，表格规范化展示数据，后期将和Ansys等仿真软件进行结合，通过平台材料数据直接进行仿真运行操作。</p></li>
+<li>该网站平台需在__Windows系统__上部署，分为__前端__和__后端__。</li>
+<li>__后端__为基于Django搭建的数据管理平台，用于处理前端数据请求，并对数据进行增删改查操作。</li>
+<li>__前端__为基于VUE搭建的系统平台，用于用户对于材料信息的检索、比对，表格规范化展示数据，后期将和Ansys等仿真软件进行结合，通过平台材料数据直接进行仿真运行操作。</li>
 </ul>
 </div>
 <div class="section" id="id3">
@@ -202,19 +202,19 @@
 <div class="section" id="id4">
 <h3>后端相关环境软件安装<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <ol class="simple">
-<li><p>安装Python</p></li>
+<li>安装Python</li>
 </ol>
 <p>本平台使用Python3.6.8进行部署</p>
 <ol class="simple">
-<li><p>安装mysql</p></li>
-<li><p>安装mongodb</p></li>
+<li>安装mysql</li>
+<li>安装mongodb</li>
 </ol>
 <p>安装过程建议一路next，否则容易卡bug。</p>
 <p>另mongodb安装时，最后可能会卡很长时间，如发生卡死现象，可在安装过程中选择__不安装__mongodb compass，如下图所示。该程序为mongodb可视化界面，如不安装不会影响平台部署。</p>
 <p><img alt="https://tcs-ga.teambition.net/storage/111x20c9c799966c6b1a4e303893e21a6d72?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMGM5Yzc5OTk2NmM2YjFhNGUzMDM4OTNlMjFhNmQ3MiJ9.-scvgdsPFKsSPKkvOWzgX-XEHJ8hfYfoUdAPDmyTzwQ&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x20c9c799966c6b1a4e303893e21a6d72?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMGM5Yzc5OTk2NmM2YjFhNGUzMDM4OTNlMjFhNmQ3MiJ9.-scvgdsPFKsSPKkvOWzgX-XEHJ8hfYfoUdAPDmyTzwQ&amp;download=image.png" /></p>
 <ol class="simple">
-<li><p>安装Redis</p></li>
-<li><p>安装Python依赖包</p></li>
+<li>安装Redis</li>
+<li>安装Python依赖包</li>
 </ol>
 <p>请使用命令<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">–r</span> <span class="pre">requirements.txt</span></code>用需求文件进行安装，安装过程可能会报mod_wsgi相关错误，是因为没有安装Apache，可从requirements.txt中<strong>删除最后一行mod_wsgi的配置</strong>，保存后再次运行命令。</p>
 <p><strong>另请将txt文件中</strong><code class="docutils literal notranslate"><span class="pre">**simpleui==4.0.3**</span></code><strong>改为</strong><code class="docutils literal notranslate"><span class="pre">**django-simpleui==4.0.3**</span></code></p>
@@ -228,13 +228,13 @@
 <p><img alt="https://tcs-ga.teambition.net/storage/111xb85ca76aa6bf5da1977972d5fc149eee?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiODVjYTc2YWE2YmY1ZGExOTc3OTcyZDVmYzE0OWVlZSJ9.PWC6fPAkKEBm4Q6IEv_b_87r8lqL5pym69wqY6EH9Jk&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xb85ca76aa6bf5da1977972d5fc149eee?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiODVjYTc2YWE2YmY1ZGExOTc3OTcyZDVmYzE0OWVlZSJ9.PWC6fPAkKEBm4Q6IEv_b_87r8lqL5pym69wqY6EH9Jk&amp;download=image.png" /></p>
 <p><strong>该对接过程讲解以此目录为根目录，进行文件说明。</strong></p>
 <ol class="simple">
-<li><p>配置数据库对接</p></li>
+<li>配置数据库对接</li>
 </ol>
 <p><code class="docutils literal notranslate"><span class="pre">在\ZRPlatform</span> <span class="pre">下，打开settings.py文件，进行数据库数据配置</span></code>。</p>
 <p><img alt="https://tcs-ga.teambition.net/storage/111xb0a6469e5d7fa52c83d580c7f4ffa9f3?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiMGE2NDY5ZTVkN2ZhNTJjODNkNTgwYzdmNGZmYTlmMyJ9.qZRlCjihngH-HZnN_bUlA27eBk2a1xcizf2TAp3PPME&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xb0a6469e5d7fa52c83d580c7f4ffa9f3?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhiMGE2NDY5ZTVkN2ZhNTJjODNkNTgwYzdmNGZmYTlmMyJ9.qZRlCjihngH-HZnN_bUlA27eBk2a1xcizf2TAp3PPME&amp;download=image.png" /></p>
 <p>从上图可以看到，本平台使用了1个mongodb库（’ENGINE’: ‘djongo’）和两个Mysql库（’ENGINE’: ‘django.db.backends.mysql’）。数据库对接需要对Mysql数据库的用户密码进行修改（’PASSWORD’，上图中共有两处），以匹配安装Mysql数据库时的设定密码。</p>
 <ol class="simple">
-<li><p>Mysql数据库构建</p></li>
+<li>Mysql数据库构建</li>
 </ol>
 <p>Django使用ORM架构进行数据库操作管理，无法直接建立数据库，所以需要将图中的两个Mysql库进行手动建立。（图中的两个数据名字分别是’NAME’: ‘zrplatform’以及’NAME’: ‘zrp_experiment_data’）。</p>
 <p>因为之前安装Mysql的时候同时安装了mysql workbench，这里展示如何用workbench进行配置。程序在系统任务栏可以看到：</p>
@@ -247,7 +247,7 @@
 <p>建立好后便有了两个空数据库</p>
 <p><img alt="https://tcs-ga.teambition.net/storage/111x4d3e2915f83350c2ef6678c9176fcdde?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg0ZDNlMjkxNWY4MzM1MGMyZWY2Njc4YzkxNzZmY2RkZSJ9.e_Qcb7P0_U9c8YoTlN94MydQVdtcJT3lo8w3V1SabrU&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x4d3e2915f83350c2ef6678c9176fcdde?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg0ZDNlMjkxNWY4MzM1MGMyZWY2Njc4YzkxNzZmY2RkZSJ9.e_Qcb7P0_U9c8YoTlN94MydQVdtcJT3lo8w3V1SabrU&amp;download=image.png" /></p>
 <ol class="simple">
-<li><p>数据库迁移</p></li>
+<li>数据库迁移</li>
 </ol>
 <p>我们共有3个数据库准备迁移，分别是默认数据库，以及’searchdb’和’experimentdb’如下图所示。</p>
 <p><img alt="https://tcs-ga.teambition.net/storage/111x2996c975f158f01640bb0aaca9d8ceb6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyOTk2Yzk3NWYxNThmMDE2NDBiYjBhYWNhOWQ4Y2ViNiJ9.7_afDItwltmKvDV_y1f2uAk5eEEpGzpg0qBdAj6keNE&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x2996c975f158f01640bb0aaca9d8ceb6?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyOTk2Yzk3NWYxNThmMDE2NDBiYjBhYWNhOWQ4Y2ViNiJ9.7_afDItwltmKvDV_y1f2uAk5eEEpGzpg0qBdAj6keNE&amp;download=image.png" /></p>
@@ -269,21 +269,21 @@
 <div class="section" id="id6">
 <h3>后端系统启动<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <ol class="simple">
-<li><p>创建超级用户</p></li>
+<li>创建超级用户</li>
 </ol>
 <p>为进行后端平台访问，需先创建一超级用户。使用以下命令创建：</p>
 <p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">createsuperuser</span></code></p>
 <p>设置用户名和密码，无需给出邮箱，如图所示：</p>
 <p><img alt="https://tcs-ga.teambition.net/storage/111x22173930c2697c0edbf0bf57ea436258?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMjE3MzkzMGMyNjk3YzBlZGJmMGJmNTdlYTQzNjI1OCJ9.I7a90KAkUIuPcYN1PDZBtXE9YbC2BD2lorbXPF3bJ_0&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x22173930c2697c0edbf0bf57ea436258?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXgyMjE3MzkzMGMyNjk3YzBlZGJmMGJmNTdlYTQzNjI1OCJ9.I7a90KAkUIuPcYN1PDZBtXE9YbC2BD2lorbXPF3bJ_0&amp;download=image.png" /></p>
 <ol class="simple">
-<li><p>启动系统</p></li>
+<li>启动系统</li>
 </ol>
 <p>使用命令</p>
 <p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p>
 <p>启动系统：</p>
 <p><img alt="https://tcs-ga.teambition.net/storage/111x934eff203632e3f62da92f7f7b585b57?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5MzRlZmYyMDM2MzJlM2Y2MmRhOTJmN2Y3YjU4NWI1NyJ9.nH-N8Gkg7VB9pkTqeyrWfqYDQ2BfniWD7ACeUWAzZQA&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x934eff203632e3f62da92f7f7b585b57?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg5MzRlZmYyMDM2MzJlM2Y2MmRhOTJmN2Y3YjU4NWI1NyJ9.nH-N8Gkg7VB9pkTqeyrWfqYDQ2BfniWD7ACeUWAzZQA&amp;download=image.png" /></p>
 <ol class="simple">
-<li><p>访问后端</p></li>
+<li>访问后端</li>
 </ol>
 <p>推荐使用chrome或firefox浏览器对后端进行访问，网址为：</p>
 <p><a class="reference external" href="http://127.0.0.1:8000/admin">http://127.0.0.1:8000/admin</a></p>
@@ -303,11 +303,11 @@
 <h3>前后端对接<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>前端会向后端发送数据请求，故需配置发送地址。</p>
 <ol class="simple">
-<li><p>在/src/components/global.vue中，将服务器地址改为后端地址：</p></li>
+<li>在/src/components/global.vue中，将服务器地址改为后端地址：</li>
 </ol>
 <p><img alt="https://tcs-ga.teambition.net/storage/111x573f929a2fb5e8d90badbfa1db99ebdf?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg1NzNmOTI5YTJmYjVlOGQ5MGJhZGJmYTFkYjk5ZWJkZiJ9.Mga1lWmtLbprbYAF3wHzDxjUqAfuBQ0zsTFqtrt0HKA&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111x573f929a2fb5e8d90badbfa1db99ebdf?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXg1NzNmOTI5YTJmYjVlOGQ5MGJhZGJmYTFkYjk5ZWJkZiJ9.Mga1lWmtLbprbYAF3wHzDxjUqAfuBQ0zsTFqtrt0HKA&amp;download=image.png" /></p>
 <ol class="simple">
-<li><p>将/src/resfulapi/api.js中的数据请求地址改为相应路由地址</p></li>
+<li>将/src/resfulapi/api.js中的数据请求地址改为相应路由地址</li>
 </ol>
 <p><img alt="https://tcs-ga.teambition.net/storage/111xdc56e30c3758a020ffc2ef07aa8f09ef?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhkYzU2ZTMwYzM3NThhMDIwZmZjMmVmMDdhYThmMDllZiJ9.y9a-7kOGIeRxM3npFzplYPazbF4mPFymyv7kOl3gjHM&amp;download=image.png" src="https://tcs-ga.teambition.net/storage/111xdc56e30c3758a020ffc2ef07aa8f09ef?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYwMjAwMzExNywiaWF0IjoxNjAxMzk4MzE3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMXhkYzU2ZTMwYzM3NThhMDIwZmZjMmVmMDdhYThmMDllZiJ9.y9a-7kOGIeRxM3npFzplYPazbF4mPFymyv7kOl3gjHM&amp;download=image.png" /></p>
 <p><em><strong>修正</strong></em>：</p>
