@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>意见反馈接口测试 &mdash; ZRPlatform-docs 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="测试文档" href="1010test.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ZRPlatform-docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Working Process</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../work/present_work.html">当前工作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/done.html">已完成工作记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../work/requirements.html">待改进需求</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/instruction.html">文档维护说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/Platform_Deployment.html">重燃平台部署指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/test_the_front.html">测试数据库前端使用方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/the_back_end.html">后端word手册数据导入及前端用户登录</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Interface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../interface/manual_and_measuring.html">测试数据库接口文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/manual_and_measuring.html#id6">手册数据库接口文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/material_interface_plan.html">材料数据库接口调研</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/development.html">这是开发文档</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Test</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1010test.html">测试文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1010test.html#api">1010测试 (多级表头\遍历主表API 测试)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">意见反馈接口测试</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id">获取意见反馈表中的id，标题，用户名，状态，时间等基本信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">获取详细内容和附件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">下载附件</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ZRPlatform-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>意见反馈接口测试</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/test/feedback_test.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>意见反馈接口测试<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id">
+<h2>获取意见反馈表中的id，标题，用户名，状态，时间等基本信息<a class="headerlink" href="#id" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">请求方法</span></code>：GET</p>
+<p><code class="docutils literal notranslate"><span class="pre">接口地址</span></code>：/feedback/traversal</p>
+<p>入参：无需入参</p>
+<p>出参：遍历表中所有数据，获取基本信息</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;Artemisaturn&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-29T10:32:07.138000+08:00&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-29T10:31:17.460000+08:00&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;feedback&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;ZR&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-29T13:33:59.717000+08:00&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-29T16:35:59.118000+08:00&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>获取详细内容和附件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">请求方法</span></code>：POST</p>
+<p><code class="docutils literal notranslate"><span class="pre">接口地址</span></code>：/feedback/getmore</p>
+<p>入参：反馈意见的id</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span> <span class="p">:</span> <span class="mi">3</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>出参：该反馈意见的详情和附件</p>
+<p><code class="docutils literal notranslate"><span class="pre">content</span></code>：意见详情</p>
+<p><code class="docutils literal notranslate"><span class="pre">files</span></code>：是否有附件</p>
+<p><code class="docutils literal notranslate"><span class="pre">filepath</span></code>：附件路径</p>
+<p><code class="docutils literal notranslate"><span class="pre">filepath</span></code>：附件名</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;try&lt;/p&gt;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;filepath&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;feedback/file/2020-10-29/工业智能方向.docx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;feedback/file/2020-10-29/采矿组修改中文.docx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;feedback/file/2020-10-29/人机交互组研究方向2.docx&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;工业智能方向.docx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;采矿组修改中文.docx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;人机交互组研究方向2.docx&quot;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>没有附件的情况：</p>
+<p>入参：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span> <span class="p">:</span> <span class="mi">6</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>出参：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;try&lt;/p&gt;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>若反馈意见不存在：</p>
+<p>入参：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span> <span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>出参：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">10010</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;该反馈意见不存在!&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>下载附件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">请求方法</span></code>：POST</p>
+<p><code class="docutils literal notranslate"><span class="pre">接口地址</span></code>：/feedback/filedown</p>
+<p>入参：文件名和文件路径</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;filepath&quot;</span><span class="p">:</span> <span class="s2">&quot;/feedback/file/2020-10-29/人机交互组研究方向2.docx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;人机交互组研究方向2.docx&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>出参：return  StreamingHttpResponse类</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="1010test.html" class="btn btn-neutral float-left" title="测试文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 版权所有 2020, Artemisaturn
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
