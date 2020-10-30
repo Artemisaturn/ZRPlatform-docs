@@ -233,24 +233,31 @@
 </div>
 <p>出参：该反馈意见的详情和附件</p>
 <p><code class="docutils literal notranslate"><span class="pre">content</span></code>：意见详情</p>
-<p><code class="docutils literal notranslate"><span class="pre">files</span></code>：是否有附件</p>
-<p><code class="docutils literal notranslate"><span class="pre">filepath</span></code>：附件路径</p>
-<p><code class="docutils literal notranslate"><span class="pre">filepath</span></code>：附件名</p>
+<p><code class="docutils literal notranslate"><span class="pre">files</span></code>：附件list</p>
+<p><code class="docutils literal notranslate"><span class="pre">url</span></code>：附件路径</p>
+<p><code class="docutils literal notranslate"><span class="pre">filename</span></code>：附件名</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
     <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;Artemisaturn&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-29T02:32:07.138000Z&quot;</span><span class="p">,</span>
         <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;try&lt;/p&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;filepath&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;feedback/file/2020-10-29/工业智能方向.docx&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;feedback/file/2020-10-29/采矿组修改中文.docx&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;feedback/file/2020-10-29/人机交互组研究方向2.docx&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;工业智能方向.docx&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;采矿组修改中文.docx&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;人机交互组研究方向2.docx&quot;</span>
+        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;工业智能方向.docx&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/feedback/file/2020-10-29/工业智能方向.docx&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;采矿组修改中文.docx&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/feedback/file/2020-10-29/采矿组修改中文.docx&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;人机交互组研究方向2.docx&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/feedback/file/2020-10-29/人机交互组研究方向2.docx&quot;</span>
+            <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -268,8 +275,12 @@
     <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
     <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-10-29T08:35:59.118000Z&quot;</span><span class="p">,</span>
         <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;try&lt;/p&gt;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="kc">null</span>
+        <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[]</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -295,7 +306,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">接口地址</span></code>：/feedback/filedown</p>
 <p>入参：文件名和文件路径</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;filepath&quot;</span><span class="p">:</span> <span class="s2">&quot;/feedback/file/2020-10-29/人机交互组研究方向2.docx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/feedback/file/2020-10-29/人机交互组研究方向2.docx&quot;</span><span class="p">,</span>
     <span class="nt">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;人机交互组研究方向2.docx&quot;</span>
 <span class="p">}</span>
 </pre></div>

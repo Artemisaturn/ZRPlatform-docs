@@ -61,28 +61,35 @@
 
 ```content```：意见详情
 
-```files```：是否有附件
+```files```：附件list
 
-```filepath```：附件路径
+```url```：附件路径
 
-```filepath```：附件名
+```filename```：附件名
 
 ```json
 {
     "code": 200,
     "message": "",
     "data": {
+        "title": "1",
+        "username": "Artemisaturn",
+        "status": 0,
+        "time": "2020-10-29T02:32:07.138000Z",
         "content": "<p>try</p>",
-        "files": true,
-        "filepath": [
-            "feedback/file/2020-10-29/工业智能方向.docx",
-            "feedback/file/2020-10-29/采矿组修改中文.docx",
-            "feedback/file/2020-10-29/人机交互组研究方向2.docx"
-        ],
-        "filename": [
-            "工业智能方向.docx",
-            "采矿组修改中文.docx",
-            "人机交互组研究方向2.docx"
+        "files": [
+            {
+                "filename": "工业智能方向.docx",
+                "url": "/media/feedback/file/2020-10-29/工业智能方向.docx"
+            },
+            {
+                "filename": "采矿组修改中文.docx",
+                "url": "/media/feedback/file/2020-10-29/采矿组修改中文.docx"
+            },
+            {
+                "filename": "人机交互组研究方向2.docx",
+                "url": "/media/feedback/file/2020-10-29/人机交互组研究方向2.docx"
+            }
         ]
     }
 }
@@ -105,8 +112,12 @@
     "code": 200,
     "message": "",
     "data": {
+        "title": "6",
+        "username": null,
+        "status": 0,
+        "time": "2020-10-29T08:35:59.118000Z",
         "content": "<p>try</p>",
-        "files": null
+        "files": []
     }
 }
 ```
@@ -140,7 +151,7 @@
 
 ```json
 {
-    "filepath": "/feedback/file/2020-10-29/人机交互组研究方向2.docx",
+    "url": "/media/feedback/file/2020-10-29/人机交互组研究方向2.docx",
     "filename": "人机交互组研究方向2.docx"
 }
 ```
