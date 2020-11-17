@@ -1,13 +1,13 @@
 # 推荐材料数据库接口文档
 
 ### 返回推荐材料数据库中的所有公司及其所有推荐材料（拼接牌号）
-- `**请求方法**`: POST
+- `请求方法`: POST
 
-- `**接口地址**`: api/v1/rec_material/company-material
+- `接口地址`: api/v1/rec_material/company-material
 
-- 入参(无需入参)：
+- `入参(无需入参)`:
 
-- 出参：
+- `出参`:
 ```json
 {
     "code": 200,
