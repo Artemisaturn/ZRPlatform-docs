@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<html class="writer-html4" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -26,18 +26,18 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="这是开发文档" href="../development/development.html" />
+    <link rel="next" title="推荐材料数据库接口文档" href="recommended_material.html" />
     <link rel="prev" title="测试数据库接口文档" href="manual_and_measuring.html" /> 
 </head>
 
@@ -109,6 +109,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="recommended_material.html">推荐材料数据库接口文档</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
@@ -190,20 +191,20 @@
 <h2>现有接口<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>除上传下载、模板生成等接口外，每个model都有相应的接口：</p>
 <ul class="simple">
-<li><p>CategoryView
-返回所有的材料种类</p></li>
-<li><p>SourceView
-返回所有的数据来源</p></li>
-<li><p>MaterialView
-返回根据材料种类、数据来源、查询条件筛选的材料</p></li>
-<li><p>MaterialDetailView
-返回根据材料id的材料详情</p></li>
-<li><p>MaterialPhyAndCheView
-返回根据材料id的物理化学性能</p></li>
-<li><p>MaterialMechanicsView
-返回根据材料id的力学性能</p></li>
-<li><p>MaterialStruAndPerfView
-返回根据材料id的组织结构和工艺性能</p></li>
+<li>CategoryView
+返回所有的材料种类</li>
+<li>SourceView
+返回所有的数据来源</li>
+<li>MaterialView
+返回根据材料种类、数据来源、查询条件筛选的材料</li>
+<li>MaterialDetailView
+返回根据材料id的材料详情</li>
+<li>MaterialPhyAndCheView
+返回根据材料id的物理化学性能</li>
+<li>MaterialMechanicsView
+返回根据材料id的力学性能</li>
+<li>MaterialStruAndPerfView
+返回根据材料id的组织结构和工艺性能</li>
 </ul>
 </div>
 <div class="section" id="id3">
@@ -211,7 +212,7 @@
 <div class="section" id="id4">
 <h3>细化粒度<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <ul>
-<li><p>实现同时浏览不同性能部分的功能</p>
+<li><p class="first">实现同时浏览不同性能部分的功能</p>
 <p>跨表</p>
 </li>
 </ul>
@@ -219,10 +220,9 @@
 <div class="section" id="id5">
 <h3>结构调整<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li><p>后续会把结构组织和工艺性能分表，需要单独编写这两部分的接口：</p>
-<ol class="simple">
-<li><p>MaterialStructureView</p></li>
-<li><p>MaterialPerformanceView</p></li>
+<li>后续会把结构组织和工艺性能分表，需要单独编写这两部分的接口：<ol>
+<li>MaterialStructureView</li>
+<li>MaterialPerformanceView</li>
 </ol>
 </li>
 </ul>
@@ -238,7 +238,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../development/development.html" class="btn btn-neutral float-right" title="这是开发文档" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="recommended_material.html" class="btn btn-neutral float-right" title="推荐材料数据库接口文档" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="manual_and_measuring.html" class="btn btn-neutral float-left" title="测试数据库接口文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

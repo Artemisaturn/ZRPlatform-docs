@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
+<html class="writer-html4" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -26,11 +26,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="_static/translations.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -100,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="interface/manual_and_measuring.html">测试数据库接口文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface/manual_and_measuring.html#id6">手册数据库接口文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface/material_interface_plan.html">材料数据库接口调研</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface/recommended_material.html">推荐材料数据库接口文档</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
@@ -188,15 +189,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="work/done.html">已完成工作记录</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id2">意见反馈功能数据库和接口完善 -&gt; 王佳敏</a></li>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id3">多级表头基本完成 -&gt; 李长泰</a></li>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id4">前端头像地址修改&amp;增加多级表头 -&gt; 李长泰</a></li>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id5">10.6 工作总结</a></li>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id6">前端用户注册机制改进 -&gt; 王佳敏</a></li>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id7">去掉冗余数据库 -&gt; 张田雨</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id2">推荐材料建库和一级接口实现 -&gt; 李长泰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id3">意见反馈功能数据库和接口完善 -&gt; 王佳敏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id4">多级表头基本完成 -&gt; 李长泰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id5">前端头像地址修改&amp;增加多级表头 -&gt; 李长泰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id6">10.6 工作总结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id7">前端用户注册机制改进 -&gt; 王佳敏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id8">去掉冗余数据库 -&gt; 张田雨</a></li>
 <li class="toctree-l2"><a class="reference internal" href="work/done.html#word">word文档导入与后端材料添加相统一</a></li>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id8">将第三版手册倒入手册数据库中</a></li>
-<li class="toctree-l2"><a class="reference internal" href="work/done.html#id9">9.24目标进度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id9">将第三版手册倒入手册数据库中</a></li>
+<li class="toctree-l2"><a class="reference internal" href="work/done.html#id10">9.24目标进度</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="work/requirements.html">待改进需求</a><ul>
@@ -268,6 +270,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="interface/recommended_material.html">推荐材料数据库接口文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interface/recommended_material.html#id2">返回推荐材料数据库中的所有公司及其所有推荐材料（拼接牌号）</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -297,9 +303,9 @@
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="永久链接至标题">¶</a></h1>
 <ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">模块索引</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">搜索页面</span></a></p></li>
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">模块索引</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">搜索页面</span></a></li>
 </ul>
 </div>
 
